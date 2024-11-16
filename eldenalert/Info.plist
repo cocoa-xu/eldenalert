@@ -4,11 +4,6 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>AgmenaPro-Bold.ttf</string>
-		<string>AgmenaPro-BoldItalic.ttf</string>
-		<string>AgmenaPro-Book.ttf</string>
-		<string>AgmenaPro-BookItalic.ttf</string>
-		<string>AgmenaPro-Italic.ttf</string>
 		<string>AgmenaPro-Regular.ttf</string>
 	</array>
 </dict>

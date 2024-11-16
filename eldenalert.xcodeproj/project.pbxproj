@@ -3,192 +3,223 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CC5612812CE763DA001538DE /* AgmenaPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC56127B2CE763DA001538DE /* AgmenaPro-Regular.ttf */; };
-		CC56133D2CE83E79001538DE /* death.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CC56133B2CE83E79001538DE /* death.m4a */; };
-		CC56133E2CE83E79001538DE /* victory.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CC56133C2CE83E79001538DE /* victory.m4a */; };
-		CC5613412CE83F73001538DE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5613402CE83F73001538DE /* AudioToolbox.framework */; };
-		CC5613432CE83F84001538DE /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5613422CE83F84001538DE /* CoreText.framework */; };
-		CC5613452CE83F93001538DE /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5613442CE83F93001538DE /* CoreVideo.framework */; };
+		CCD16AAD2CE8D80B00FF9A8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCD16AAC2CE8D80B00FF9A8C /* Assets.xcassets */; };
+		CCD16AB02CE8D80C00FF9A8C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CCD16AAF2CE8D80C00FF9A8C /* Base */; };
+		CCD16ABB2CE8D82800FF9A8C /* AgmenaPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCD16AB92CE8D82800FF9A8C /* AgmenaPro-Regular.ttf */; };
+		CCD16ABF2CE8D83900FF9A8C /* death.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CCD16ABC2CE8D83900FF9A8C /* death.m4a */; };
+		CCD16AC02CE8D83900FF9A8C /* victory.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CCD16ABD2CE8D83900FF9A8C /* victory.m4a */; };
+		CCD16AD22CE8D85800FF9A8C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD16AC32CE8D85800FF9A8C /* AppDelegate.m */; };
+		CCD16AD32CE8D85800FF9A8C /* OverlayWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD16AC52CE8D85800FF9A8C /* OverlayWindow.m */; };
+		CCD16AD42CE8D85800FF9A8C /* FontManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD16AC72CE8D85800FF9A8C /* FontManager.m */; };
+		CCD16AD52CE8D85800FF9A8C /* EldenAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD16AC92CE8D85800FF9A8C /* EldenAlertView.m */; };
+		CCD16AD62CE8D85800FF9A8C /* TextFieldWithSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD16ACB2CE8D85800FF9A8C /* TextFieldWithSpacing.m */; };
+		CCD16AD72CE8D85800FF9A8C /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD16ACC2CE8D85800FF9A8C /* GradientView.m */; };
+		CCD16AD82CE8D85800FF9A8C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD16ACE2CE8D85800FF9A8C /* main.m */; };
+		CCD16AD92CE8D85800FF9A8C /* OverlayWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD16AD02CE8D85800FF9A8C /* OverlayWindowController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CC5612452CE759BE001538DE /* eldenalert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eldenalert.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC56127B2CE763DA001538DE /* AgmenaPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AgmenaPro-Regular.ttf"; sourceTree = "<group>"; };
-		CC56133B2CE83E79001538DE /* death.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = death.m4a; sourceTree = "<group>"; };
-		CC56133C2CE83E79001538DE /* victory.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = victory.m4a; sourceTree = "<group>"; };
-		CC5613402CE83F73001538DE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		CC5613422CE83F84001538DE /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		CC5613442CE83F93001538DE /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		CCD16AA32CE8D80B00FF9A8C /* eldenalert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eldenalert.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCD16AAC2CE8D80B00FF9A8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CCD16AAF2CE8D80C00FF9A8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CCD16AB32CE8D80C00FF9A8C /* eldenalert.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = eldenalert.entitlements; sourceTree = "<group>"; };
+		CCD16AB92CE8D82800FF9A8C /* AgmenaPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AgmenaPro-Regular.ttf"; sourceTree = "<group>"; };
+		CCD16ABC2CE8D83900FF9A8C /* death.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = death.m4a; sourceTree = "<group>"; };
+		CCD16ABD2CE8D83900FF9A8C /* victory.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = victory.m4a; sourceTree = "<group>"; };
+		CCD16AC12CE8D85800FF9A8C /* ExportOptions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ExportOptions.plist; sourceTree = "<group>"; };
+		CCD16AC22CE8D85800FF9A8C /* FontManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontManager.h; sourceTree = "<group>"; };
+		CCD16AC32CE8D85800FF9A8C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../../eldenalert1/eldenalert/AppDelegate.m; sourceTree = "<group>"; };
+		CCD16AC42CE8D85800FF9A8C /* OverlayWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayWindowController.h; sourceTree = "<group>"; };
+		CCD16AC52CE8D85800FF9A8C /* OverlayWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayWindow.m; sourceTree = "<group>"; };
+		CCD16AC62CE8D85800FF9A8C /* EldenAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EldenAlertView.h; sourceTree = "<group>"; };
+		CCD16AC72CE8D85800FF9A8C /* FontManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontManager.m; sourceTree = "<group>"; };
+		CCD16AC82CE8D85800FF9A8C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../eldenalert1/eldenalert/AppDelegate.h; sourceTree = "<group>"; };
+		CCD16AC92CE8D85800FF9A8C /* EldenAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EldenAlertView.m; sourceTree = "<group>"; };
+		CCD16ACA2CE8D85800FF9A8C /* TextFieldWithSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldWithSpacing.h; sourceTree = "<group>"; };
+		CCD16ACB2CE8D85800FF9A8C /* TextFieldWithSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldWithSpacing.m; sourceTree = "<group>"; };
+		CCD16ACC2CE8D85800FF9A8C /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
+		CCD16ACD2CE8D85800FF9A8C /* OverlayWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayWindow.h; sourceTree = "<group>"; };
+		CCD16ACE2CE8D85800FF9A8C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../../eldenalert1/eldenalert/main.m; sourceTree = "<group>"; };
+		CCD16ACF2CE8D85800FF9A8C /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
+		CCD16AD02CE8D85800FF9A8C /* OverlayWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayWindowController.m; sourceTree = "<group>"; };
+		CCD16ADA2CE8D8A400FF9A8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		CC5612832CE76415001538DE /* Exceptions for "eldenalert" folder in "eldenalert" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = CC5612442CE759BE001538DE /* eldenalert */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		CC5612472CE759BE001538DE /* eldenalert */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				CC5612832CE76415001538DE /* Exceptions for "eldenalert" folder in "eldenalert" target */,
-			);
-			path = eldenalert;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
-
 /* Begin PBXFrameworksBuildPhase section */
-		CC5612422CE759BE001538DE /* Frameworks */ = {
+		CCD16AA02CE8D80B00FF9A8C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC5613412CE83F73001538DE /* AudioToolbox.framework in Frameworks */,
-				CC5613432CE83F84001538DE /* CoreText.framework in Frameworks */,
-				CC5613452CE83F93001538DE /* CoreVideo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CC56123C2CE759BE001538DE = {
+		CCD16A9A2CE8D80B00FF9A8C = {
 			isa = PBXGroup;
 			children = (
-				CC56133A2CE83E6D001538DE /* SFX */,
-				CC5612472CE759BE001538DE /* eldenalert */,
-				CC5612462CE759BE001538DE /* Products */,
-				CC5612752CE763C8001538DE /* Fonts */,
-				CC56133F2CE83F73001538DE /* Frameworks */,
+				CCD16AA52CE8D80B00FF9A8C /* eldenalert */,
+				CCD16AA42CE8D80B00FF9A8C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CC5612462CE759BE001538DE /* Products */ = {
+		CCD16AA42CE8D80B00FF9A8C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CC5612452CE759BE001538DE /* eldenalert.app */,
+				CCD16AA32CE8D80B00FF9A8C /* eldenalert.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CC5612752CE763C8001538DE /* Fonts */ = {
+		CCD16AA52CE8D80B00FF9A8C /* eldenalert */ = {
 			isa = PBXGroup;
 			children = (
-				CC56127B2CE763DA001538DE /* AgmenaPro-Regular.ttf */,
+				CCD16ADA2CE8D8A400FF9A8C /* Info.plist */,
+				CCD16AAC2CE8D80B00FF9A8C /* Assets.xcassets */,
+				CCD16AC82CE8D85800FF9A8C /* AppDelegate.h */,
+				CCD16AC32CE8D85800FF9A8C /* AppDelegate.m */,
+				CCD16AC62CE8D85800FF9A8C /* EldenAlertView.h */,
+				CCD16AC92CE8D85800FF9A8C /* EldenAlertView.m */,
+				CCD16AC12CE8D85800FF9A8C /* ExportOptions.plist */,
+				CCD16AC22CE8D85800FF9A8C /* FontManager.h */,
+				CCD16AC72CE8D85800FF9A8C /* FontManager.m */,
+				CCD16ACF2CE8D85800FF9A8C /* GradientView.h */,
+				CCD16ACC2CE8D85800FF9A8C /* GradientView.m */,
+				CCD16ACE2CE8D85800FF9A8C /* main.m */,
+				CCD16ACD2CE8D85800FF9A8C /* OverlayWindow.h */,
+				CCD16AC52CE8D85800FF9A8C /* OverlayWindow.m */,
+				CCD16AC42CE8D85800FF9A8C /* OverlayWindowController.h */,
+				CCD16AD02CE8D85800FF9A8C /* OverlayWindowController.m */,
+				CCD16ACA2CE8D85800FF9A8C /* TextFieldWithSpacing.h */,
+				CCD16ACB2CE8D85800FF9A8C /* TextFieldWithSpacing.m */,
+				CCD16AAE2CE8D80C00FF9A8C /* Main.storyboard */,
+				CCD16AB32CE8D80C00FF9A8C /* eldenalert.entitlements */,
+				CCD16ABE2CE8D83900FF9A8C /* SFX */,
+				CCD16ABA2CE8D82800FF9A8C /* Fonts */,
+			);
+			path = eldenalert;
+			sourceTree = "<group>";
+		};
+		CCD16ABA2CE8D82800FF9A8C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CCD16AB92CE8D82800FF9A8C /* AgmenaPro-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		CC56133A2CE83E6D001538DE /* SFX */ = {
+		CCD16ABE2CE8D83900FF9A8C /* SFX */ = {
 			isa = PBXGroup;
 			children = (
-				CC56133B2CE83E79001538DE /* death.m4a */,
-				CC56133C2CE83E79001538DE /* victory.m4a */,
+				CCD16ABC2CE8D83900FF9A8C /* death.m4a */,
+				CCD16ABD2CE8D83900FF9A8C /* victory.m4a */,
 			);
 			path = SFX;
-			sourceTree = "<group>";
-		};
-		CC56133F2CE83F73001538DE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				CC5613442CE83F93001538DE /* CoreVideo.framework */,
-				CC5613422CE83F84001538DE /* CoreText.framework */,
-				CC5613402CE83F73001538DE /* AudioToolbox.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CC5612442CE759BE001538DE /* eldenalert */ = {
+		CCD16AA22CE8D80B00FF9A8C /* eldenalert */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CC5612582CE759BF001538DE /* Build configuration list for PBXNativeTarget "eldenalert" */;
+			buildConfigurationList = CCD16AB62CE8D80C00FF9A8C /* Build configuration list for PBXNativeTarget "eldenalert" */;
 			buildPhases = (
-				CC5612412CE759BE001538DE /* Sources */,
-				CC5612422CE759BE001538DE /* Frameworks */,
-				CC5612432CE759BE001538DE /* Resources */,
+				CCD16A9F2CE8D80B00FF9A8C /* Sources */,
+				CCD16AA02CE8D80B00FF9A8C /* Frameworks */,
+				CCD16AA12CE8D80B00FF9A8C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				CC5612472CE759BE001538DE /* eldenalert */,
-			);
 			name = eldenalert;
-			packageProductDependencies = (
-			);
-			productName = elderalert;
-			productReference = CC5612452CE759BE001538DE /* eldenalert.app */;
+			productName = eldenalert;
+			productReference = CCD16AA32CE8D80B00FF9A8C /* eldenalert.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CC56123D2CE759BE001538DE /* Project object */ = {
+		CCD16A9B2CE8D80B00FF9A8C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1610;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
-					CC5612442CE759BE001538DE = {
-						CreatedOnToolsVersion = 16.1;
+					CCD16AA22CE8D80B00FF9A8C = {
+						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
-			buildConfigurationList = CC5612402CE759BE001538DE /* Build configuration list for PBXProject "eldenalert" */;
+			buildConfigurationList = CCD16A9E2CE8D80B00FF9A8C /* Build configuration list for PBXProject "eldenalert" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = CC56123C2CE759BE001538DE;
-			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
-			productRefGroup = CC5612462CE759BE001538DE /* Products */;
+			mainGroup = CCD16A9A2CE8D80B00FF9A8C;
+			productRefGroup = CCD16AA42CE8D80B00FF9A8C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CC5612442CE759BE001538DE /* eldenalert */,
+				CCD16AA22CE8D80B00FF9A8C /* eldenalert */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CC5612432CE759BE001538DE /* Resources */ = {
+		CCD16AA12CE8D80B00FF9A8C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC5612812CE763DA001538DE /* AgmenaPro-Regular.ttf in Resources */,
-				CC56133D2CE83E79001538DE /* death.m4a in Resources */,
-				CC56133E2CE83E79001538DE /* victory.m4a in Resources */,
+				CCD16AAD2CE8D80B00FF9A8C /* Assets.xcassets in Resources */,
+				CCD16ABB2CE8D82800FF9A8C /* AgmenaPro-Regular.ttf in Resources */,
+				CCD16AB02CE8D80C00FF9A8C /* Base in Resources */,
+				CCD16ABF2CE8D83900FF9A8C /* death.m4a in Resources */,
+				CCD16AC02CE8D83900FF9A8C /* victory.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CC5612412CE759BE001538DE /* Sources */ = {
+		CCD16A9F2CE8D80B00FF9A8C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCD16AD22CE8D85800FF9A8C /* AppDelegate.m in Sources */,
+				CCD16AD92CE8D85800FF9A8C /* OverlayWindowController.m in Sources */,
+				CCD16AD42CE8D85800FF9A8C /* FontManager.m in Sources */,
+				CCD16AD32CE8D85800FF9A8C /* OverlayWindow.m in Sources */,
+				CCD16AD52CE8D85800FF9A8C /* EldenAlertView.m in Sources */,
+				CCD16AD72CE8D85800FF9A8C /* GradientView.m in Sources */,
+				CCD16AD82CE8D85800FF9A8C /* main.m in Sources */,
+				CCD16AD62CE8D85800FF9A8C /* TextFieldWithSpacing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		CCD16AAE2CE8D80C00FF9A8C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCD16AAF2CE8D80C00FF9A8C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		CC5612562CE759BF001538DE /* Debug */ = {
+		CCD16AB42CE8D80C00FF9A8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -241,7 +272,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +280,7 @@
 			};
 			name = Debug;
 		};
-		CC5612572CE759BF001538DE /* Release */ = {
+		CCD16AB52CE8D80C00FF9A8C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -296,14 +327,14 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 			};
 			name = Release;
 		};
-		CC5612592CE759BF001538DE /* Debug */ = {
+		CCD16AB72CE8D80C00FF9A8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -311,10 +342,9 @@
 				CODE_SIGN_ENTITLEMENTS = eldenalert/eldenalert.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 42;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = eldenalert/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Elden Alert";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -323,15 +353,15 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.5;
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = moe.uwucocoa.eldenalert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Debug;
 		};
-		CC56125A2CE759BF001538DE /* Release */ = {
+		CCD16AB82CE8D80C00FF9A8C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -339,10 +369,9 @@
 				CODE_SIGN_ENTITLEMENTS = eldenalert/eldenalert.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 42;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = eldenalert/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Elden Alert";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -351,8 +380,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.5;
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = moe.uwucocoa.eldenalert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -362,25 +391,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CC5612402CE759BE001538DE /* Build configuration list for PBXProject "eldenalert" */ = {
+		CCD16A9E2CE8D80B00FF9A8C /* Build configuration list for PBXProject "eldenalert" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CC5612562CE759BF001538DE /* Debug */,
-				CC5612572CE759BF001538DE /* Release */,
+				CCD16AB42CE8D80C00FF9A8C /* Debug */,
+				CCD16AB52CE8D80C00FF9A8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CC5612582CE759BF001538DE /* Build configuration list for PBXNativeTarget "eldenalert" */ = {
+		CCD16AB62CE8D80C00FF9A8C /* Build configuration list for PBXNativeTarget "eldenalert" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CC5612592CE759BF001538DE /* Debug */,
-				CC56125A2CE759BF001538DE /* Release */,
+				CCD16AB72CE8D80C00FF9A8C /* Debug */,
+				CCD16AB82CE8D80C00FF9A8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = CC56123D2CE759BE001538DE /* Project object */;
+	rootObject = CCD16A9B2CE8D80B00FF9A8C /* Project object */;
 }
