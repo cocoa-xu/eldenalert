@@ -1,0 +1,96 @@
+name: Release macOS App
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  build_with_signing:
+    runs-on: macos-latest
+    env:
+      PROJECT_NAME: eldenalert
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Install the Apple certificate and provisioning profile
+        env:
+          APPLE_DEV_CERTIFICATE_BASE64: ${{ secrets.APPLE_DEV_CERTIFICATE_BASE64 }}
+          DEV_ID_APP_CERTIFICATE_BASE64: ${{ secrets.DEV_ID_APP_CERTIFICATE_BASE64 }}
+          APPLE_DEV_CERTIFICATE_PASSWORD: ${{ secrets.APPLE_DEV_CERTIFICATE_PASSWORD }}
+          DEV_ID_APP_CERTIFICATE_PASSWORD: ${{ secrets.DEV_ID_APP_CERTIFICATE_PASSWORD }}
+          KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
+        run: |
+          APPLE_DEV_CERTIFICATE_PATH=$RUNNER_TEMP/apple_dev.p12
+          DEV_ID_APP_CERTIFICATE_PATH=$RUNNER_TEMP/dev_id_app.p12
+          KEYCHAIN_PATH=$RUNNER_TEMP/app-signing.keychain-db
+
+          # import certificate and provisioning profile from secrets
+          echo -n "$APPLE_DEV_CERTIFICATE_BASE64" | base64 --decode -o $APPLE_DEV_CERTIFICATE_PATH
+          echo -n "$DEV_ID_APP_CERTIFICATE_BASE64" | base64 --decode -o $DEV_ID_APP_CERTIFICATE_PATH
+
+          # create temporary keychain
+          security create-keychain -p "$KEYCHAIN_PASSWORD" $KEYCHAIN_PATH
+          security set-keychain-settings -lut 21600 $KEYCHAIN_PATH
+          security unlock-keychain -p "$KEYCHAIN_PASSWORD" $KEYCHAIN_PATH
+
+          # import certificate to keychain
+          security import $APPLE_DEV_CERTIFICATE_PATH -P "$APPLE_DEV_CERTIFICATE_PASSWORD" -A -t cert -f pkcs12 -k $KEYCHAIN_PATH
+          security import $DEV_ID_APP_CERTIFICATE_PATH -P "$DEV_ID_APP_CERTIFICATE_PASSWORD" -A -t cert -f pkcs12 -k $KEYCHAIN_PATH
+          security list-keychain -d user -s $KEYCHAIN_PATH
+
+      - name: Build app
+        run: |
+          xcodebuild \
+            archive \
+            -project "${{ env.PROJECT_NAME }}.xcodeproj/" \
+            -scheme "${{ env.PROJECT_NAME }}" \
+            -destination "generic/platform=macOS" \
+            -archivePath "dist/${{ env.PROJECT_NAME }}.xcarchive"
+          xcodebuild \
+            -exportArchive \
+            -archivePath "dist/${{ env.PROJECT_NAME }}.xcarchive" \
+            -exportOptionsPlist "${{ env.PROJECT_NAME }}/ExportOptions.plist" \
+            -exportPath dist/ \
+            -allowProvisioningUpdates
+
+      - name: Create dmg
+        run: |
+          brew install graphicsmagick imagemagick
+          npm install --global create-dmg
+          create-dmg 'dist/${{ env.PROJECT_NAME }}.app' dist
+          mv "$(find ./dist -type file -name '*.dmg')" "./dist/${{ env.PROJECT_NAME }}-universal.dmg"
+
+      - name: Notarize app
+        env:
+          TEAM_ID: ${{ secrets.TEAM_ID }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          NOTARY_PASSWORD: ${{ secrets.NOTARY_PASSWORD }}
+        run: |
+          xcrun notarytool submit \
+            --team-id "$TEAM_ID" \
+            --apple-id "$APPLE_ID" \
+            --password "$NOTARY_PASSWORD" \
+            --wait "./dist/${{ env.PROJECT_NAME }}-universal.dmg"
+          xcrun stapler staple "./dist/${{ env.PROJECT_NAME }}-universal.dmg"
+
+      - name: Upload release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            dist/*.dmg
+
+      - name: Clean up keychain and provisioning profile
+        if: ${{ always() }}
+        run: |
+          security delete-keychain $RUNNER_TEMP/app-signing.keychain-db
