@@ -1,7 +1,17 @@
 <img src="https://github.com/cocoa-xu/eldenalert/raw/main/assets/repository-open-graph.png" alt="Logo">
 
 ## Screenshot
-![screenshot](assets/eldenalert.jpg)
+### Victory
+
+![victory-1](assets/victory-1.jpg)
+
+![victory-2](assets/victory-2.jpg)
+
+### Death
+
+![death-1](assets/death-1.jpg)
+
+![death-2](assets/death-2.jpg)
 
 ## Usage
 
